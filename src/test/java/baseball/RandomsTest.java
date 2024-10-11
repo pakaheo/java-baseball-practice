@@ -1,10 +1,13 @@
 package baseball;
 
+import camp.nextstep.edu.missionutils.Randoms;
 import org.junit.jupiter.api.Test;
 
-public class ComputerTest {
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class RandomsTest {
     @Test
     void pickNumberInRange_테스트() {
-        Computer
+        assertThat(Randoms.pickNumberInRange(1, 9)).isStrictlyBetween(1, 9);
     }
 }
