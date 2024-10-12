@@ -1,4 +1,4 @@
-package baseball;
+package baseball.domain;
 
 import java.math.BigDecimal;
 import java.nio.file.Path;
@@ -34,6 +34,7 @@ public class Judge {
         return (int) IntStream.range(0, computerPick.size())
                 .filter(i -> isBall(computerPick, computerPick.get(i), userAnswer.get(i)))
                 .count();
+        // com : 589 user : 597
     }
 
     private boolean isStrike(int computer, int user) {

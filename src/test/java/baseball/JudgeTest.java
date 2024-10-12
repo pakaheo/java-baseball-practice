@@ -1,5 +1,6 @@
 package baseball;
 
+import baseball.domain.Judge;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

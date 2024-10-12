@@ -1,6 +1,4 @@
-package view;
-
-import camp.nextstep.edu.missionutils.Console;
+package baseball.view;
 
 public class ResultView {
 
