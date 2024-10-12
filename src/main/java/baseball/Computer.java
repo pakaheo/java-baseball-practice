@@ -11,19 +11,20 @@ public class Computer {
     private static final int MIN_BOUND = 1;
     private static final int MAX_BOUND = 9;
 
-    private static List<Integer> numbers;
+    private final List<Integer> numbers = new ArrayList<>();
 
-    public static List<Integer> pickNumbers() {
-        numbers = new ArrayList<>();
+    public List<Integer> pickNumbers() {
         while (numbers.size() < SIZE) {
-            addIfNotContainsNumber(Randoms.pickNumberInRange(MIN_BOUND, MAX_BOUND));
+            addNumber(Randoms.pickNumberInRange(MIN_BOUND, MAX_BOUND));
         }
+
         return numbers;
     }
 
-    private static void addIfNotContainsNumber(int number) {
+    private void addNumber(int number) {
         if (!numbers.contains(number)) {
             numbers.add(number);
         }
     }
+
 }
